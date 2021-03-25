@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Error</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <style>
+        html {
+            height: 50%;
+            filter: brightness(20%);
+            background: #000 url('https://cdn.dribbble.com/users/283587/screenshots/1238974/pixel-rex.gif');
+            color: #fff;
+        }
+
+        h2 {
+            color: gray;
+        }
+
+        #countdown {
+            width: 20%;
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            height: 10%;
+            margin: -15% 0 0 -10%;
+        }
+
+        #next {
+            width: 20%;
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            height: 10%;
+            margin: -15% 0 0 -10%;
+        }
+
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+</head>
+
+<body>
+    <br><br>
+    <center>
+        <h2>Oops, you're caught an error.</h2>
+        <h1>To solve this issue you should just wait 10 seconds.</h1>
+    </center>
+
+    <div align="center" id="glitchtimer">
+        <script>
+            var timeleft = 10;
+            var downloadTimer = setInterval(function() {
+                if (timeleft <= 0) {
+                    clearInterval(downloadTimer);
+                    document.getElementById("countdown").innerHTML = '<i class="fas fa-mouse-pointer"> <i class="fas fa-arrow-left"></i> point your mouse here.</i>';
+                } else {
+                    document.getElementById("countdown").innerHTML = timeleft + "";
+                }
+                timeleft -= 1;
+            }, 1000);
+
+        </script>
+
+        <div id="countdown"></div>
+    </div>
+
+    <form action="#" method="get" target="_blank">
+        <button type="submit" id="next" class="btn btn-outline-light">Next</button>
+    </form><br>
+
+</body>
+
+</html>
